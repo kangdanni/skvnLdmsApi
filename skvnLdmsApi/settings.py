@@ -31,12 +31,12 @@ ALLOWED_HOSTS = [os.environ.get('API_URL', ''), 'localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.admin', #관리용 사이트
+    'django.contrib.auth', # 인증 시스템
+    'django.contrib.contenttypes', # 컨텐츠 타입을 위한 프레임워크 
+    'django.contrib.sessions', #세션 프레임워크
+    'django.contrib.messages', #메시징 프레임 워크 
+    'django.contrib.staticfiles', #정적 파일을 관리하는 프레임 워크 
     'common.apps.CommonConfig',
     'rest_framework'
 ]
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
