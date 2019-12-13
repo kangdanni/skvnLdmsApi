@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "aws_region": "ap-northeast-2",
+        "django_settings": "skvnLdmsApi.settings",
+        "profile_name": "skvno2o_dev",
+        "project_name": "skvnldmsapi",
+        "runtime": "python3.7",
+        "s3_bucket": "skvn-ldms-api-upload-dev",
+        "environment_variables": {
+            "DB_HOST": "sktl-inner-dev.ctybjczi1kks.ap-northeast-2.rds.amazonaws.com",
+            "API_URL": "ol20kocmsg.execute-api.ap-northeast-2.amazonaws.com"
+        }
+    }
+}
