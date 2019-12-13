@@ -1,4 +1,14 @@
+"""
+__version__ = '0.0.0'
+__author__ = 'kkangdanni@sk.com'
+__date__ = '2019-12-11'
+__copyright__ = 'Copyright 2019, SK Telink CO,LTD All Rights Reserved.'
+
+"""
+
+
 from django.db import models
+
 
 # Create your models here.
 """
@@ -27,4 +37,13 @@ class TVtnUsedPhoneShopcommon(models.Model):
     class Meta:
         managed = False
         db_table = 't_vtn_used_phone_shopcommon'
-        
+
+"""
+columnlist
+"""
+class TVtnUsedPhoneCommoncode(models.Model):
+    manage_id = models.CharField(max_length=5, primary_key=True)
+	manage_nm = models.CharField(max_length=50) 
+	manage_cd = models.CharField(max_length=50) 
+	use_yn = models.CharField(max_length=2) 
+	inspt_yn = models.CharField(max_length=2)
