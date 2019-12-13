@@ -77,5 +77,5 @@ class ShopInfoView(APIView) :
             rt_data['rt_data'] = list(shop_info)
             
 
-        response_serializer = ResponseLoginSerializer(rt_data)
+        response_serializer = ResponseShopInfoSerializer(rt_data)
         return Response(response_serializer.data, status=rt_data['statusCode'])

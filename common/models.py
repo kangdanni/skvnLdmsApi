@@ -43,7 +43,7 @@ columnlist
 """
 class TVtnUsedPhoneCommoncode(models.Model):
     manage_id = models.CharField(max_length=5, primary_key=True)
-	manage_nm = models.CharField(max_length=50) 
-	manage_cd = models.CharField(max_length=50) 
-	use_yn = models.CharField(max_length=2) 
-	inspt_yn = models.CharField(max_length=2)
+    manage_nm = models.CharField(max_length=50) 
+    manage_cd = models.CharField(max_length=50)
+    use_yn = models.CharField(max_length=2)
+    inspt_yn = models.CharField(max_length=2)
