@@ -38,12 +38,33 @@ class TVtnUsedPhoneShopcommon(models.Model):
         managed = False
         db_table = 't_vtn_used_phone_shopcommon'
 
+
+
 """
-columnlist
+Common Code
 """
-class TVtnUsedPhoneCommoncode(models.Model):
-    manage_id = models.CharField(max_length=5, primary_key=True)
-    manage_nm = models.CharField(max_length=50) 
-    manage_cd = models.CharField(max_length=50)
-    use_yn = models.CharField(max_length=2)
-    inspt_yn = models.CharField(max_length=2)
+class TCommCdDtl(models.Model):
+    comm_cd_grp = models.CharField(max_length=10)
+    comm_cd = models.CharField(max_length=10)
+    comm_nm = models.CharField(max_length=200, blank=True, null=True)
+    ref_cd1 = models.CharField(max_length=500, blank=True, null=True)
+    ref_cd2 = models.CharField(max_length=500, blank=True, null=True)
+    ref_cd3 = models.CharField(max_length=500, blank=True, null=True)
+    ref_cd4 = models.CharField(max_length=500, blank=True, null=True)
+    deflt_yn = models.CharField(max_length=1, default='Y')
+    rmrk = models.CharField(max_length=1000, blank=True, null=True)
+    sort_no = models.IntegerField(blank=True, null=True)
+    use_yn = models.CharField(max_length=1, default='Y')
+    sys_use_yn = models.CharField(max_length=1, default='Y')
+    inpt_menu_id = models.CharField(max_length=10, blank=True, null=True)
+    regr_id = models.CharField(max_length=50, blank=True, null=True)
+    reg_date = models.DateField(blank=True, null=True)
+    chgr_id = models.CharField(max_length=50, blank=True, null=True)
+    chg_date = models.DateField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 't_comm_cd_dtl'
+        unique_together = (('comm_cd_grp', 'comm_cd'),)
+
+
